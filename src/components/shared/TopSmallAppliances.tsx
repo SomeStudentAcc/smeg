@@ -66,7 +66,7 @@ export default function TopSmallAppliances() {
         }}
       >
         {data.map((el, i) => (
-          <SwiperSlide key={el.id}>
+          <SwiperSlide key={el.id} className="my-h">
             <>
               <div
                 style={{ background: el.bg }}

@@ -89,7 +89,8 @@ export default function NavMobile({ isMobNav, setMobNav }: Props) {
                   setSelectedCategory({
                     title: item.title,
                     subCategories: item.subCategories || [],
-                    url: item.url,
+                /*     url: item.url, */
+                    url: '/filters',
                   })
                 }
               >
@@ -104,7 +105,7 @@ export default function NavMobile({ isMobNav, setMobNav }: Props) {
               onClick={() => {
                 setMobNav(false);
                 setTimeout(() => {
-                  router.push("/filters");
+                  router.push("/sales");
                 }, 50);
               }}
               className="text-[#666666]"
@@ -158,7 +159,8 @@ export default function NavMobile({ isMobNav, setMobNav }: Props) {
           <div className="flex flex-col h-full p-5 overflow-y-auto gap-10">
             <div className="flex items-center justify-between">
               <Link
-                href={`/catalog/${selectedCategory.url}`}
+/*                 href={`/catalog/${selectedCategory.url}`}
+ */                href={`/filters`}
                 onClick={() => {
                   setSelectedCategory(null);
                   setMobNav(false);
@@ -182,7 +184,8 @@ export default function NavMobile({ isMobNav, setMobNav }: Props) {
               {selectedCategory.subCategories.map((sub) => (
                 <li key={sub.id} className="py-4 border-b border-white/10">
                   <Link
-                    href={`/catalog/${selectedCategory.url}/${sub.url}`}
+/*                     href={`/catalog/${selectedCategory.url}/${sub.url}`}
+ */                    href={`/filters`}
                     className="text-[#666666] "
                     onClick={() => {
                       setSelectedCategory(null);
