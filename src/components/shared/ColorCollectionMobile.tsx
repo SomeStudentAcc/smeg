@@ -58,13 +58,12 @@ export default function ColorsCollectionMobile() {
         className="w-full h-auto"
         onSwiper={(swiper) => (swiperRef.current = swiper)}
       >
-        {data.map((el) => (
+        {/* {data.map((el) => (
           <SwiperSlide
             key={el.id}
             className="!flex !items-center !justify-center"
           >
             <div className="grid grid-cols-1">
-              {/* Left Text Section */}
               <div className="mx-auto max-w-xs text-center flex flex-col gap-5">
                 <h1 className="text-2xl font-bold">Cream Collection</h1>
                 <h4 className="text-lg">{el.title}</h4>
@@ -80,6 +79,25 @@ export default function ColorsCollectionMobile() {
                 <p className="font-semibold cursor-pointer">SHOP NOW</p>
               </div>
             </div>
+          </SwiperSlide>
+        ))} */}
+
+        {data.map((el) => (
+          <SwiperSlide key={el.id}>
+              <div className="mx-auto max-w-xs w-full text-center flex flex-col gap-5">
+                <h1 className="text-2xl font-bold">Cream Collection</h1>
+                <h4 className="text-lg">{el.title}</h4>
+                <div className=" w-full h-[350px] rounded-3xl overflow-hidden">
+                  <Image
+                    src="/smegCat.jpg"
+                    className="block w-full h-full object-cover"
+                    height={500}
+                    width={400}
+                    alt=""
+                  />
+                </div>
+                <p className="font-semibold cursor-pointer">SHOP NOW</p>
+              </div>
           </SwiperSlide>
         ))}
       </Swiper>

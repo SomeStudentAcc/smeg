@@ -93,9 +93,11 @@ export default function CollectionSliderMobile() {
                   className="block w-full h-[250px] sm:h-[320px] object-cover"
                 />
               </div>
-              <p className="hover-opacity block py-5 text-sm uppercase">
-                {el.title}
-              </p>
+              <div className="flex justify-center">
+                <p className="hover-opacity text-center block py-5 text-sm uppercase">
+                  {el.title}
+                </p>
+              </div>
             </div>
           </SwiperSlide>
           /*  <SwiperSlide key={el.id}>

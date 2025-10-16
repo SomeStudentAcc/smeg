@@ -77,7 +77,7 @@ export default function ColorsCollection() {
         {data.map((el) => (
           <SwiperSlide
             key={el.id}
-            className="!flex !items-center !justify-center my-h"
+            className="!flex !items-center !justify-center "
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 lg:w-full lg:items-center lg:gap-10">
               {/* Left Text Section */}

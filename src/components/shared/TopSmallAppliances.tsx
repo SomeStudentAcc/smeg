@@ -66,11 +66,11 @@ export default function TopSmallAppliances() {
         }}
       >
         {data.map((el, i) => (
-          <SwiperSlide key={el.id} className="my-h">
-            <>
+          <SwiperSlide key={el.id} className="my-h ">
+            <div className="flex flex-col  h-full">
               <div
                 style={{ background: el.bg }}
-                className={`text-center w-[250px] sm:w-[280px] md:w-[320px] my-h pr-3   rounded-[48px] hover-opacity  ${
+                className={`text-center   rounded-[48px] hover-opacity flex-1  ${
                   i % 2 === 0 ? "md:mt-22" : "md:mt-0"
                 }`}
               >
@@ -82,12 +82,12 @@ export default function TopSmallAppliances() {
                   className="block w-full h-full  object-cover transition-transform duration-300 ease-in-out transform hover:scale-105"
                 />
               </div>
-              <div className="text-center">
-                <p className="hover-opacity block py-5 text-sm texc uppercase">
+              <div className="text-center h-[60px]">
+                <p className="hover-opacity block py-5 text-sm text uppercase">
                   {el.title}
                 </p>
               </div>
-            </>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
