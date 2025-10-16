@@ -80,8 +80,8 @@ export default function CollectionSliderMobile() {
         }}
       >
         {data.map((el) => (
-          <SwiperSlide key={el.id}>
-            <>
+          <SwiperSlide key={el.id} className="my-h">
+            <div>
               <div
                 className={`text-center w-[250px] sm:w-[280px] md:w-[320px] my-h rounded-[48px] overflow-hidden `}
               >
@@ -90,13 +90,13 @@ export default function CollectionSliderMobile() {
                   alt={el.title}
                   width={500}
                   height={800}
-                  className="block w-full h-full min-h-[330px]  object-cover"
+                  className="block w-full h-[250px] sm:h-[320px] object-cover"
                 />
               </div>
               <p className="hover-opacity block py-5 text-sm uppercase">
                 {el.title}
               </p>
-            </>
+            </div>
           </SwiperSlide>
           /*  <SwiperSlide key={el.id}>
             <div

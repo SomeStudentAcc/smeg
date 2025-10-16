@@ -93,7 +93,7 @@ export default function CollectionsSlider() {
           className="w-full  px-8"
         >
           {data.map((slide) => (
-            <SwiperSlide key={slide.id} className="flex justify-center">
+            <SwiperSlide key={slide.id} className="flex justify-center my-h">
               {({ isActive, isPrev, isNext }) => {
                 const slideClasses =
                   "transition-all duration-700 ease-out cursor-pointer relative flex flex-col items-center";
