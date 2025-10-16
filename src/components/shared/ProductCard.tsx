@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import FavoriteButton from "./FavoriteButton";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
@@ -21,7 +20,7 @@ export default function ProductCard() {
       href={"/product/1"}
       className="flex flex-col gap-3 w-full max-w-[300px] cursor-pointer group "
     >
-      <div className="relative h-auto w-full aspect-square overflow-hidden transition-transform duration-300 group-hover:scale-105">
+      <div className="relative h-auto w-full aspect-square overflow-hidden transition-transform duration-300 group-hover:scale-105 ">
         <Image
           src={prod.image}
           alt="Product Image"

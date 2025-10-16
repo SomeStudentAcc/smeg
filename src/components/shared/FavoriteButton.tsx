@@ -31,7 +31,7 @@ export default function FavoriteButton({ product }: Props) {
 
   return (
     <div
-      className="absolute right-0 top-0 z-10 p-5 cursor-pointer"
+      className="absolute right-0 top-0 z-10 p-1 cursor-pointer"
       onClick={handleClick}
     >
       <Heart
