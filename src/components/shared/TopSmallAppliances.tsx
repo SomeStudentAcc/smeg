@@ -67,7 +67,7 @@ export default function TopSmallAppliances() {
       >
         {data.map((el, i) => (
           <SwiperSlide key={el.id} className="my-h ">
-            <div className="flex flex-col  h-full">
+            <div className="flex md:block flex-col  h-full">
               <div
                 style={{ background: el.bg }}
                 className={`text-center   rounded-[48px] hover-opacity flex-1  ${
