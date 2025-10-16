@@ -7,6 +7,7 @@ export default function VideoSlider() {
         className="w-full h-full object-cover object-center"
         autoPlay
         muted
+        playsInline
         loop
         src={"/sliderVideo.mp4"}
       ></video>
