@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.my-h {
+  height: auto !important;
+  align-self: stretch;
+}
+
+/* Custom pagination container styling */
+.my-pagination {
+  position: static !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 4px !important;
+  margin: 16px 0 !important;
+  width: 100% !important;
+  height: 200px !important; /* Fixed height so bullets can distribute evenly */
+  overflow: hidden !important; /* Prevent overflow */
+}
+
+.swiper-vertical {
+  transform: none !important;
+}
+
+/* Custom bullet styling - FLAT and RESPONSIVE */
+.swiper-pagination-bullet {
+  width: 2px !important;
+  background: #ebedef !important;
+  border-radius: 8px !important; /* Rounded corners instead of circle */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #6b7280 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  opacity: 1 !important;
+  margin: 0 !important;
+
+  /* Dynamic height calculation based on container */
+  height: calc((200px - 8px) / var(--total-slides, 1)) !important;
+  min-height: 18px !important;
+  max-height: 50px !important;
+
+  /* Ensure text fits */
+  font-size: clamp(
+    10px,
+    calc(100% / var(--total-slides, 1) * 2),
+    14px
+  ) !important;
+}
+
+/* Active bullet styling */
+.swiper-pagination-bullet-active {
+  background: #0a0a0a !important;
+  transform: scale(1.05) !important;
+}
+
+/* Pagination bullets container */
+.swiper-pagination-bullets {
+  transform: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  gap: 2px !important;
 }
